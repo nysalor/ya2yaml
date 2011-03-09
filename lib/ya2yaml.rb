@@ -81,7 +81,7 @@ class Ya2YAML
 				u_sec = (obj.usec != 0) ? sprintf(".%.6d",obj.usec) : ''
 				obj.strftime("%Y-%m-%d %H:%M:%S#{u_sec} #{off_hm}")
 			when 'Symbol'
-				'!ruby/symbol ' + obj.to_s
+				':' + obj.to_s
 			when 'Range'
 				'!ruby/range ' + obj.to_s
 			when 'Regexp'
